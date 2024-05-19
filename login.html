@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form onsubmit="return validateLogin()">  <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateLogin() {
+            // Simulate login validation (replace with real validation logic)
+            const username = document.getElementById("username").value;
+            if (username === "ivorydevrimo" && document.getElementById("password").value === "﷽") {
+                // Login successful, redirect back to index.html
+                window.location.href = "index.html";  // Redirect to index page
+                return true; // Allow form submission
+            } else {
+                alert("Invalid username or password!");
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+</body>
+</html>
